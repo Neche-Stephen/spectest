@@ -10,8 +10,10 @@ theme = 'github.com/imfing/hextra'
 [params]
   logo = 'https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png'
   description = 'Documentation for Spectest'
-  search = true
   darkMode = true
+
+  [params.search]
+    enable = true
 
 [menu]
   [[menu.main]]
@@ -23,5 +25,5 @@ theme = 'github.com/imfing/hextra'
   [[menu.main]]
     identifier = 'docs'
     name = 'Documentation'
-    pageRef = '/docs'
+    pageRef = '/docs/introduction/'
     weight = 2
