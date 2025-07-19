@@ -1,3 +1,27 @@
-baseURL = 'https://example.org/'
+[module]
+  [[module.imports]]
+    path = "github.com/imfing/hextra"
+
+baseURL = '/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Spectest Documentation'
+theme = 'github.com/imfing/hextra'
+
+[params]
+  logo = 'https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png'
+  description = 'Documentation for Spectest'
+  search = true
+  darkMode = true
+
+[menu]
+  [[menu.main]]
+    identifier = 'home'
+    name = 'Home'
+    pageRef = '/'
+    weight = 1
+
+  [[menu.main]]
+    identifier = 'docs'
+    name = 'Documentation'
+    pageRef = '/docs'
+    weight = 2
