@@ -10,21 +10,127 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>Suite – </title>
-  <meta name="description" content="" /><link rel="canonical" href="//localhost:1313/docs/api/suite/" itemprop="url" />
+<title>CLI – </title>
+  <meta name="description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line.
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Load additional configuration from file none --base-url=&lt;url&gt; Base URL for all requests https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Pattern used to locate suite files \.spectest\. --start-cmd=&lt;cmd&gt; Command used to start the server npm run start `–running-server=&lt;reuse fail kill&gt;` --tags=&lt;list&gt; Comma separated tags for filtering none --rps=&lt;number&gt; Requests per second limit Infinity --timeout=&lt;ms&gt; Default per‑test timeout 30000 --snapshot=&lt;file&gt; Write snapshot JSON to file none --randomize Shuffle execution order false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or built‑in filter (happy, failures) none --verbose Print detailed logs false --user-agent=&lt;name&gt; Override the User‑Agent header chrome_windows --ua=&lt;name&gt; Alias of --user-agent Provide a file path without a flag to run just that suite." /><link rel="canonical" href="//localhost:1313/docs/api-references/cli/" itemprop="url" />
 
-<meta property="og:title" content="Suite" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="CLI" />
+<meta property="og:description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line.
+
+
+npx spectest [suiteFile] [options]
+  
+    
+    
+  
+
+
+Options
+    
+  
+      
+          Flag
+          Description
+          Default
+      
+  
+  
+      
+          --config=&lt;file&gt;
+          Load additional configuration from file
+          none
+      
+      
+          --base-url=&lt;url&gt;
+          Base URL for all requests
+          https://localhost:8080
+      
+      
+          --test-dir=&lt;dir&gt;
+          Directory containing test suites
+          ./test
+      
+      
+          --file-pattern=&lt;regex&gt;
+          Pattern used to locate suite files
+          \.spectest\.
+      
+      
+          --start-cmd=&lt;cmd&gt;
+          Command used to start the server
+          npm run start
+      
+      
+          `&ndash;running-server=&lt;reuse
+          fail
+          kill&gt;`
+      
+      
+          --tags=&lt;list&gt;
+          Comma separated tags for filtering
+          none
+      
+      
+          --rps=&lt;number&gt;
+          Requests per second limit
+          Infinity
+      
+      
+          --timeout=&lt;ms&gt;
+          Default per‑test timeout
+          30000
+      
+      
+          --snapshot=&lt;file&gt;
+          Write snapshot JSON to file
+          none
+      
+      
+          --randomize
+          Shuffle execution order
+          false
+      
+      
+          --happy
+          Run only tests expecting a 2xx status
+          false
+      
+      
+          --filter=&lt;pattern&gt;
+          Regex or built‑in filter (happy, failures)
+          none
+      
+      
+          --verbose
+          Print detailed logs
+          false
+      
+      
+          --user-agent=&lt;name&gt;
+          Override the User‑Agent header
+          chrome_windows
+      
+      
+          --ua=&lt;name&gt;
+          Alias of --user-agent
+          
+      
+  
+
+Provide a file path without a flag to run just that suite." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//localhost:1313/docs/api/suite/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="//localhost:1313/docs/api-references/cli/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="Suite">
-  <meta itemprop="description" content="Documentation for Spectest">
+  <meta itemprop="name" content="CLI">
+  <meta itemprop="description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line.
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Load additional configuration from file none --base-url=&lt;url&gt; Base URL for all requests https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Pattern used to locate suite files \.spectest\. --start-cmd=&lt;cmd&gt; Command used to start the server npm run start `–running-server=&lt;reuse fail kill&gt;` --tags=&lt;list&gt; Comma separated tags for filtering none --rps=&lt;number&gt; Requests per second limit Infinity --timeout=&lt;ms&gt; Default per‑test timeout 30000 --snapshot=&lt;file&gt; Write snapshot JSON to file none --randomize Shuffle execution order false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or built‑in filter (happy, failures) none --verbose Print detailed logs false --user-agent=&lt;name&gt; Override the User‑Agent header chrome_windows --ua=&lt;name&gt; Alias of --user-agent Provide a file path without a flag to run just that suite.">
+  <meta itemprop="wordCount" content="195">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="Suite">
-  <meta name="twitter:description" content="Documentation for Spectest">
+  <meta name="twitter:title" content="CLI">
+  <meta name="twitter:description" content="The spectest command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line.
+npx spectest [suiteFile] [options] Options Flag Description Default --config=&lt;file&gt; Load additional configuration from file none --base-url=&lt;url&gt; Base URL for all requests https://localhost:8080 --test-dir=&lt;dir&gt; Directory containing test suites ./test --file-pattern=&lt;regex&gt; Pattern used to locate suite files \.spectest\. --start-cmd=&lt;cmd&gt; Command used to start the server npm run start `–running-server=&lt;reuse fail kill&gt;` --tags=&lt;list&gt; Comma separated tags for filtering none --rps=&lt;number&gt; Requests per second limit Infinity --timeout=&lt;ms&gt; Default per‑test timeout 30000 --snapshot=&lt;file&gt; Write snapshot JSON to file none --randomize Shuffle execution order false --happy Run only tests expecting a 2xx status false --filter=&lt;pattern&gt; Regex or built‑in filter (happy, failures) none --verbose Print detailed logs false --user-agent=&lt;name&gt; Override the User‑Agent header chrome_windows --ua=&lt;name&gt; Alias of --user-agent Provide a file path without a flag to run just that suite.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -223,33 +329,41 @@
             </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/"
+    href="/docs/api-references/"
     
   >API References
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/cli/"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/api-references/cli/"
     
   >CLI
     </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/api/suite/"
-    
-  >Suite
-    </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              ></a>
+            </li>
+          </ul>
   
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/test-case/"
+    href="/docs/api-references/suite/"
+    
+  >Test Suite
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/api-references/test-case/"
     
   >Test Case
     </a>
@@ -411,31 +525,31 @@
           <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/"
+    href="/docs/api-references/"
     
   >API References
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
-    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/cli/"
-    
-  >CLI
-    </a>
-              
-            </li><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/api/suite/"
+    href="/docs/api-references/cli/"
     
-  >Suite
+  >CLI
     </a>
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/test-case/"
+    href="/docs/api-references/suite/"
+    
+  >Test Suite
+    </a>
+              
+            </li><li class="hx-flex hx-flex-col "><a
+    class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/api-references/test-case/"
     
   >Test Case
     </a>
@@ -511,8 +625,16 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#options">Options
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#examples">Examples
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -532,24 +654,147 @@
           <a href="/docs/">Docs</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/api/">API References</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Suite</div>
+          <a href="/docs/api-references/">API References</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">CLI</div>
   </div>
 
         <div class="content">
-          <h1>Suite</h1>
-          
+          <h1>CLI</h1>
+          <p>The <code>spectest</code> command runs suites and manages the test environment. All options correspond to configuration fields and may be supplied via the config file or the command line.</p>
+<div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span>npx spectest <span style="color:#f92672">[</span>suiteFile<span style="color:#f92672">]</span> <span style="color:#f92672">[</span>options<span style="color:#f92672">]</span></span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<h3>Options<span class="hx-absolute -hx-mt-20" id="options"></span>
+    <a href="#options" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Flag</th>
+          <th>Description</th>
+          <th>Default</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>--config=&lt;file&gt;</code></td>
+          <td>Load additional configuration from file</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>--base-url=&lt;url&gt;</code></td>
+          <td>Base URL for all requests</td>
+          <td><code>https://localhost:8080</code></td>
+      </tr>
+      <tr>
+          <td><code>--test-dir=&lt;dir&gt;</code></td>
+          <td>Directory containing test suites</td>
+          <td><code>./test</code></td>
+      </tr>
+      <tr>
+          <td><code>--file-pattern=&lt;regex&gt;</code></td>
+          <td>Pattern used to locate suite files</td>
+          <td><code>\.spectest\.</code></td>
+      </tr>
+      <tr>
+          <td><code>--start-cmd=&lt;cmd&gt;</code></td>
+          <td>Command used to start the server</td>
+          <td><code>npm run start</code></td>
+      </tr>
+      <tr>
+          <td>`&ndash;running-server=&lt;reuse</td>
+          <td>fail</td>
+          <td>kill&gt;`</td>
+      </tr>
+      <tr>
+          <td><code>--tags=&lt;list&gt;</code></td>
+          <td>Comma separated tags for filtering</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>--rps=&lt;number&gt;</code></td>
+          <td>Requests per second limit</td>
+          <td><code>Infinity</code></td>
+      </tr>
+      <tr>
+          <td><code>--timeout=&lt;ms&gt;</code></td>
+          <td>Default per‑test timeout</td>
+          <td><code>30000</code></td>
+      </tr>
+      <tr>
+          <td><code>--snapshot=&lt;file&gt;</code></td>
+          <td>Write snapshot JSON to file</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>--randomize</code></td>
+          <td>Shuffle execution order</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>--happy</code></td>
+          <td>Run only tests expecting a 2xx status</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>--filter=&lt;pattern&gt;</code></td>
+          <td>Regex or built‑in filter (<code>happy</code>, <code>failures</code>)</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>--verbose</code></td>
+          <td>Print detailed logs</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>--user-agent=&lt;name&gt;</code></td>
+          <td>Override the User‑Agent header</td>
+          <td><code>chrome_windows</code></td>
+      </tr>
+      <tr>
+          <td><code>--ua=&lt;name&gt;</code></td>
+          <td>Alias of <code>--user-agent</code></td>
+          <td></td>
+      </tr>
+  </tbody>
+</table>
+<p>Provide a file path without a flag to run just that suite.</p>
+<p>See <a href="./suite/" >Test Suite</a> and <a href="./test-case/" >Test Case</a> for details on the file format.</p>
+<h3>Examples<span class="hx-absolute -hx-mt-20" id="examples"></span>
+    <a href="#examples" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-bash" data-lang="bash"><span style="display:flex;"><span><span style="color:#75715e"># Run every suite discovered in testDir</span>
+</span></span><span style="display:flex;"><span>npx spectest
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Only run a specific file</span>
+</span></span><span style="display:flex;"><span>npx spectest auth.spectest.js
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#75715e"># Run with mobile user agent and record snapshots</span>
+</span></span><span style="display:flex;"><span>npx spectest --user-agent<span style="color:#f92672">=</span>chrome_android --snapshot<span style="color:#f92672">=</span>snap.json</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/api/cli/"
-        title="CLI"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
-      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>CLI</a><a
-        href="/docs/api/test-case/"
-        title="Test Case"
+        href="/docs/api-references/suite/"
+        title="Test Suite"
         class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Test Case<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+      >Test Suite<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
         
       </main>
     </article>

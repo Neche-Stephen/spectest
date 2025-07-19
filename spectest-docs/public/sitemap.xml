@@ -4,7 +4,7 @@
   <url>
     <loc>//localhost:1313/docs/more/about/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/api/cli/</loc>
+    <loc>//localhost:1313/docs/api-references/cli/</loc>
   </url><url>
     <loc>//localhost:1313/docs/introduction/getting-started/</loc>
   </url><url>
@@ -20,17 +20,17 @@
   </url><url>
     <loc>//localhost:1313/docs/guides/snapshots/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/api/suite/</loc>
-  </url><url>
     <loc>//localhost:1313/docs/more/terms-of-service/</loc>
+  </url><url>
+    <loc>//localhost:1313/docs/api-references/suite/</loc>
   </url><url>
     <loc>//localhost:1313/docs/integrations/vitest/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/api/</loc>
+    <loc>//localhost:1313/docs/api-references/</loc>
   </url><url>
     <loc>//localhost:1313/docs/guides/environment-variables/</loc>
   </url><url>
-    <loc>//localhost:1313/docs/api/test-case/</loc>
+    <loc>//localhost:1313/docs/api-references/test-case/</loc>
   </url><url>
     <loc>//localhost:1313/docs/introduction/testing-http-apis/</loc>
   </url><url>

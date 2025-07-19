@@ -10,21 +10,170 @@
 <link rel="icon" href="/favicon-32x32.png" type="image/png" sizes="32x32" />
 <link rel="apple-touch-icon" href="/apple-touch-icon.png" sizes="180x180" />
 <link fetchpriority="low" href="/site.webmanifest" rel="manifest" />
-<title>CLI – </title>
-  <meta name="description" content="" /><link rel="canonical" href="//localhost:1313/docs/api/cli/" itemprop="url" />
+<title>Test Case – </title>
+  <meta name="description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure." /><link rel="canonical" href="//localhost:1313/docs/api-references/test-case/" itemprop="url" />
 
-<meta property="og:title" content="CLI" />
-<meta property="og:description" content="" />
+<meta property="og:title" content="Test Case" />
+<meta property="og:description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
+Properties
+    
+  
+      
+          Key
+          Description
+          Default
+      
+  
+  
+      
+          name
+          Human readable test name
+          required
+      
+      
+          operationId
+          Unique identifier for the operation
+          name
+      
+      
+          dependsOn
+          Array of operationId strings that must pass first
+          none
+      
+      
+          endpoint
+          Request path relative to the base URL
+          required
+      
+      
+          request.method
+          HTTP method
+          GET
+      
+      
+          request.headers
+          Additional request headers
+          none
+      
+      
+          request.body
+          Request payload
+          none
+      
+      
+          request.*
+          Any other valid fetch Request option
+          none
+      
+      
+          response.status
+          Expected HTTP status
+          200
+      
+      
+          response.json
+          Expected partial JSON body
+          none
+      
+      
+          response.schema
+          Zod or JSON schema to validate response
+          none
+      
+      
+          response.headers
+          Expected response headers
+          none
+      
+      
+          response.*
+          Other fetch Response fields
+          none
+      
+      
+          beforeSend(req, state)
+          Function to finalize the request
+          none
+      
+      
+          postTest(res, state, ctx)
+          Function called after the response
+          none
+      
+      
+          tags
+          Tags used with --tags filtering
+          none
+      
+      
+          skip
+          Skip this test
+          false
+      
+      
+          focus
+          Run only focused tests when present
+          false
+      
+      
+          repeat
+          Extra sequential runs of the test
+          0
+      
+      
+          bombard
+          Additional simultaneous runs of the test
+          0
+      
+      
+          delay
+          Milliseconds to wait before running
+          none
+      
+      
+          timeout
+          Per‑test timeout override
+          runtime timeout
+      
+  
+
+Example
+    
+
+{
+  name: &#39;Create a post&#39;,
+  endpoint: &#39;/posts&#39;,
+  request: {
+    method: &#39;POST&#39;,
+    headers: { &#39;Content-Type&#39;: &#39;application/json&#39; },
+    body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 }
+  },
+  response: {
+    status: 201,
+    json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 }
+  }
+}
+  
+    
+    
+  
+
+
+If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure." />
 <meta property="og:type" content="article" />
-<meta property="og:url" content="//localhost:1313/docs/api/cli/" /><meta property="article:section" content="docs" />
+<meta property="og:url" content="//localhost:1313/docs/api-references/test-case/" /><meta property="article:section" content="docs" />
 
 
 
-  <meta itemprop="name" content="CLI">
-  <meta itemprop="description" content="Documentation for Spectest">
+  <meta itemprop="name" content="Test Case">
+  <meta itemprop="description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
+  <meta itemprop="wordCount" content="257">
   <meta name="twitter:card" content="summary">
-  <meta name="twitter:title" content="CLI">
-  <meta name="twitter:description" content="Documentation for Spectest">
+  <meta name="twitter:title" content="Test Case">
+  <meta name="twitter:description" content="A test case describes a single HTTP operation. Only name and endpoint are required. All other fields are optional and mirror the fetch Request and Response objects.
+Properties Key Description Default name Human readable test name required operationId Unique identifier for the operation name dependsOn Array of operationId strings that must pass first none endpoint Request path relative to the base URL required request.method HTTP method GET request.headers Additional request headers none request.body Request payload none request.* Any other valid fetch Request option none response.status Expected HTTP status 200 response.json Expected partial JSON body none response.schema Zod or JSON schema to validate response none response.headers Expected response headers none response.* Other fetch Response fields none beforeSend(req, state) Function to finalize the request none postTest(res, state, ctx) Function called after the response none tags Tags used with --tags filtering none skip Skip this test false focus Run only focused tests when present false repeat Extra sequential runs of the test 0 bombard Additional simultaneous runs of the test 0 delay Milliseconds to wait before running none timeout Per‑test timeout override runtime timeout Example { name: &#39;Create a post&#39;, endpoint: &#39;/posts&#39;, request: { method: &#39;POST&#39;, headers: { &#39;Content-Type&#39;: &#39;application/json&#39; }, body: { title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } }, response: { status: 201, json: { id: 101, title: &#39;foo&#39;, body: &#39;bar&#39;, userId: 1 } } } If the server returns 201 with a matching body the case passes. Any mismatched status or body value results in a failure.">
 
     <link href="/css/compiled/main.css" rel="stylesheet" />
 
@@ -223,36 +372,44 @@
             </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/"
+    href="/docs/api-references/"
     
   >API References
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a>
               <div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/api/cli/"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/api-references/cli/"
     
   >CLI
     </a>
-  
               
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/suite/"
+    href="/docs/api-references/suite/"
     
-  >Suite
+  >Test Suite
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/test-case/"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/api-references/test-case/"
     
   >Test Case
     </a>
+  
+    <ul class='hx-flex hx-flex-col hx-gap-1 hx-relative before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] dark:before:hx-bg-neutral-800 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-pr-3 rtl:before:hx-right-0 ltr:hx-ml-3 rtl:hx-mr-3'><li>
+              <a
+                href="#"
+                class="hx-flex hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [word-break:break-word] hx-cursor-pointer [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] contrast-more:hx-border hx-gap-2 before:hx-opacity-25 before:hx-content-['#'] hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:hx-text-gray-900 contrast-more:dark:hx-text-gray-50 contrast-more:hx-border-transparent contrast-more:hover:hx-border-gray-900 contrast-more:dark:hover:hx-border-gray-50"
+              ></a>
+            </li>
+          </ul>
+  
               
             </li></ul>
       </div>
@@ -411,15 +568,15 @@
           <li class="open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/"
+    href="/docs/api-references/"
     
   >API References
         <span class="hextra-sidebar-collapsible-button"><svg fill="none" viewBox="0 0 24 24" stroke="currentColor" class="hx-h-[18px] hx-min-w-[18px] hx-rounded-sm hx-p-0.5 hover:hx-bg-gray-800/5 dark:hover:hx-bg-gray-100/5"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" class="hx-origin-center hx-transition-transform rtl:-hx-rotate-180"></path></svg></span>
     </a><div class="ltr:hx-pr-0 hx-overflow-hidden">
-        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col open"><a
+        <ul class='hx-relative hx-flex hx-flex-col hx-gap-1 before:hx-absolute before:hx-inset-y-1 before:hx-w-px before:hx-bg-gray-200 before:hx-content-[""] ltr:hx-ml-3 ltr:hx-pl-3 ltr:before:hx-left-0 rtl:hx-mr-3 rtl:hx-pr-3 rtl:before:hx-right-0 dark:before:hx-bg-neutral-800'><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
-    href="/docs/api/cli/"
+      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
+    href="/docs/api-references/cli/"
     
   >CLI
     </a>
@@ -427,15 +584,15 @@
             </li><li class="hx-flex hx-flex-col "><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
       hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/suite/"
+    href="/docs/api-references/suite/"
     
-  >Suite
+  >Test Suite
     </a>
               
-            </li><li class="hx-flex hx-flex-col "><a
+            </li><li class="hx-flex hx-flex-col open"><a
     class="hx-flex hx-items-center hx-justify-between hx-gap-2 hx-cursor-pointer hx-rounded hx-px-2 hx-py-1.5 hx-text-sm hx-transition-colors [-webkit-tap-highlight-color:transparent] [-webkit-touch-callout:none] [word-break:break-word]
-      hx-text-gray-500 hover:hx-bg-gray-100 hover:hx-text-gray-900 contrast-more:hx-border contrast-more:hx-border-transparent contrast-more:hx-text-gray-900 contrast-more:hover:hx-border-gray-900 dark:hx-text-neutral-400 dark:hover:hx-bg-primary-100/5 dark:hover:hx-text-gray-50 contrast-more:dark:hx-text-gray-50 contrast-more:dark:hover:hx-border-gray-50"
-    href="/docs/api/test-case/"
+      sidebar-active-item hx-bg-primary-100 hx-font-semibold hx-text-primary-800 contrast-more:hx-border contrast-more:hx-border-primary-500 dark:hx-bg-primary-400/10 dark:hx-text-primary-600 contrast-more:dark:hx-border-primary-500"
+    href="/docs/api-references/test-case/"
     
   >Test Case
     </a>
@@ -511,8 +668,16 @@
 </div></div></aside>
     
 <nav class="hextra-toc hx-order-last hx-hidden hx-w-64 hx-shrink-0 xl:hx-block print:hx-hidden hx-px-4" aria-label="table of contents">
-    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4">
-      <div class=" hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
+    <div class="hextra-scrollbar hx-sticky hx-top-16 hx-overflow-y-auto hx-pr-4 hx-pt-6 hx-text-sm [hyphens:auto] hx-max-h-[calc(100vh-var(--navbar-height)-env(safe-area-inset-bottom))] ltr:hx--mr-4 rtl:hx--ml-4"><p class="hx-mb-4 hx-font-semibold hx-tracking-tight">On this page</p><ul>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#properties">Properties
+        </a>
+      </li>
+      <li class="hx-my-2 hx-scroll-my-6 hx-scroll-py-6">
+        <a class="ltr:hx-pl-4 rtl:hx-pr-4 hx-inline-block hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-300 contrast-more:hx-text-gray-900 contrast-more:hx-underline contrast-more:dark:hx-text-gray-50 hx-w-full hx-break-words" href="#example">Example
+        </a>
+      </li></ul>
+      <div class="hx-mt-8 hx-border-t hx-bg-white hx-pt-8 hx-shadow-[0_-12px_16px_white] dark:hx-bg-dark dark:hx-shadow-[0_-12px_16px_#111] hx-sticky hx-bottom-0 hx-flex hx-flex-col hx-items-start hx-gap-2 hx-pb-8 dark:hx-border-neutral-800 contrast-more:hx-border-t contrast-more:hx-border-neutral-400 contrast-more:hx-shadow-none contrast-more:dark:hx-border-neutral-400">
         <button aria-hidden="true" id="backToTop" onClick="scrollUp();" class="hx-transition-all hx-duration-75 hx-opacity-0 hx-text-xs hx-font-medium hx-text-gray-500 hover:hx-text-gray-900 dark:hx-text-gray-400 dark:hover:hx-text-gray-100 contrast-more:hx-text-gray-800 contrast-more:dark:hx-text-gray-50">
           <span>Scroll to top</span>
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="hx-inline ltr:hx-ml-1 rtl:hx-mr-1 hx-h-3.5 hx-w-3.5 hx-border hx-rounded-full hx-border-gray-500 hover:hx-border-gray-900 dark:hx-border-gray-400 dark:hover:hx-border-gray-100 contrast-more:hx-border-gray-800 contrast-more:dark:hx-border-gray-50">
@@ -532,20 +697,170 @@
           <a href="/docs/">Docs</a>
         </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>
         <div class="hx-whitespace-nowrap hx-transition-colors hx-min-w-[24px] hx-overflow-hidden hx-text-ellipsis hover:hx-text-gray-900 dark:hover:hx-text-gray-100">
-          <a href="/docs/api/">API References</a>
-        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">CLI</div>
+          <a href="/docs/api-references/">API References</a>
+        </div><svg class="hx-w-3.5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg><div class="hx-whitespace-nowrap hx-transition-colors hx-font-medium hx-text-gray-700 contrast-more:hx-font-bold contrast-more:hx-text-current dark:hx-text-gray-100 contrast-more:dark:hx-text-current">Test Case</div>
   </div>
 
         <div class="content">
-          <h1>CLI</h1>
-          
+          <h1>Test Case</h1>
+          <p>A <strong>test case</strong> describes a single HTTP operation. Only <code>name</code> and <code>endpoint</code> are required. All other fields are optional and mirror the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Request" target="_blank" rel="noopener"><code>fetch</code> Request</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/API/Response" target="_blank" rel="noopener"><code>Response</code></a> objects.</p>
+<h3>Properties<span class="hx-absolute -hx-mt-20" id="properties"></span>
+    <a href="#properties" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><table>
+  <thead>
+      <tr>
+          <th>Key</th>
+          <th>Description</th>
+          <th>Default</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><code>name</code></td>
+          <td>Human readable test name</td>
+          <td>required</td>
+      </tr>
+      <tr>
+          <td><code>operationId</code></td>
+          <td>Unique identifier for the operation</td>
+          <td><code>name</code></td>
+      </tr>
+      <tr>
+          <td><code>dependsOn</code></td>
+          <td>Array of operationId strings that must pass first</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>endpoint</code></td>
+          <td>Request path relative to the base URL</td>
+          <td>required</td>
+      </tr>
+      <tr>
+          <td><code>request.method</code></td>
+          <td>HTTP method</td>
+          <td><code>GET</code></td>
+      </tr>
+      <tr>
+          <td><code>request.headers</code></td>
+          <td>Additional request headers</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>request.body</code></td>
+          <td>Request payload</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>request.*</code></td>
+          <td>Any other valid fetch Request option</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>response.status</code></td>
+          <td>Expected HTTP status</td>
+          <td><code>200</code></td>
+      </tr>
+      <tr>
+          <td><code>response.json</code></td>
+          <td>Expected partial JSON body</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>response.schema</code></td>
+          <td>Zod or JSON schema to validate response</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>response.headers</code></td>
+          <td>Expected response headers</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>response.*</code></td>
+          <td>Other fetch Response fields</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>beforeSend(req, state)</code></td>
+          <td>Function to finalize the request</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>postTest(res, state, ctx)</code></td>
+          <td>Function called after the response</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>tags</code></td>
+          <td>Tags used with <code>--tags</code> filtering</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>skip</code></td>
+          <td>Skip this test</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>focus</code></td>
+          <td>Run only focused tests when present</td>
+          <td><code>false</code></td>
+      </tr>
+      <tr>
+          <td><code>repeat</code></td>
+          <td>Extra sequential runs of the test</td>
+          <td><code>0</code></td>
+      </tr>
+      <tr>
+          <td><code>bombard</code></td>
+          <td>Additional simultaneous runs of the test</td>
+          <td><code>0</code></td>
+      </tr>
+      <tr>
+          <td><code>delay</code></td>
+          <td>Milliseconds to wait before running</td>
+          <td>none</td>
+      </tr>
+      <tr>
+          <td><code>timeout</code></td>
+          <td>Per‑test timeout override</td>
+          <td>runtime <code>timeout</code></td>
+      </tr>
+  </tbody>
+</table>
+<h3>Example<span class="hx-absolute -hx-mt-20" id="example"></span>
+    <a href="#example" class="subheading-anchor" aria-label="Permalink for this section"></a></h3><div class="hextra-code-block hx-relative hx-mt-6 first:hx-mt-0 hx-group/code">
+
+<div><div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-js" data-lang="js"><span style="display:flex;"><span>{
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">name</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;Create a post&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">endpoint</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;/posts&#39;</span>,
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">request</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">method</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;POST&#39;</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">headers</span><span style="color:#f92672">:</span> { <span style="color:#e6db74">&#39;Content-Type&#39;</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;application/json&#39;</span> },
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> }
+</span></span><span style="display:flex;"><span>  },
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">response</span><span style="color:#f92672">:</span> {
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">status</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">201</span>,
+</span></span><span style="display:flex;"><span>    <span style="color:#a6e22e">json</span><span style="color:#f92672">:</span> { <span style="color:#a6e22e">id</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">101</span>, <span style="color:#a6e22e">title</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;foo&#39;</span>, <span style="color:#a6e22e">body</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;bar&#39;</span>, <span style="color:#a6e22e">userId</span><span style="color:#f92672">:</span> <span style="color:#ae81ff">1</span> }
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}</span></span></code></pre></div></div><div class="hextra-code-copy-btn-container hx-opacity-0 hx-transition group-hover/code:hx-opacity-100 hx-flex hx-gap-1 hx-absolute hx-m-[11px] hx-right-0 hx-top-0">
+  <button
+    class="hextra-code-copy-btn hx-group/copybtn hx-transition-all active:hx-opacity-50 hx-bg-primary-700/5 hx-border hx-border-black/5 hx-text-gray-600 hover:hx-text-gray-900 hx-rounded-md hx-p-1.5 dark:hx-bg-primary-300/10 dark:hx-border-white/10 dark:hx-text-gray-400 dark:hover:hx-text-gray-50"
+    title="Copy code"
+  >
+    <div class="copy-icon group-[.copied]/copybtn:hx-hidden hx-pointer-events-none hx-h-4 hx-w-4"></div>
+    <div class="success-icon hx-hidden group-[.copied]/copybtn:hx-block hx-pointer-events-none hx-h-4 hx-w-4"></div>
+  </button>
+</div>
+</div>
+<p>If the server returns <code>201</code> with a matching body the case passes. Any mismatched status or body value results in a failure.</p>
+<p>See <a href="../introduction/helpers/" >Helpers</a> for utilities that modify multiple cases at once.</p>
+
         </div>
         <div class="hx-mt-16"></div>
         <div class="hx-mb-8 hx-flex hx-items-center hx-border-t hx-pt-8 dark:hx-border-neutral-800 contrast-more:hx-border-neutral-400 dark:contrast-more:hx-border-neutral-400 print:hx-hidden"><a
-        href="/docs/api/suite/"
-        title="Suite"
-        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-ml-auto ltr:hx-pl-4 ltr:hx-text-right rtl:hx-mr-auto rtl:hx-pr-4 rtl:hx-text-left"
-      >Suite<svg class="hx-inline hx-h-5 hx-shrink-0 rtl:-hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg></a></div>
+        href="/docs/api-references/suite/"
+        title="Test Suite"
+        class="hx-flex hx-max-w-[50%] hx-items-center hx-gap-1 hx-py-4 hx-text-base hx-font-medium hx-text-gray-600 hx-transition-colors [word-break:break-word] hover:hx-text-primary-600 dark:hx-text-gray-300 md:hx-text-lg ltr:hx-pr-4 rtl:hx-pl-4"
+      ><svg class="hx-inline hx-h-5 hx-shrink-0 ltr:hx-rotate-180" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M9 5l7 7-7 7"/></svg>Test Suite</a></div>
         
       </main>
     </article>
