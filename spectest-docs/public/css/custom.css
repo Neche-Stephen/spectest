@@ -1,16 +1,27 @@
-.sidebar-container {
+/* Target pages that contain the hero shortcode (landing page specific) */
+.hx-container:has([class*="hero"]) ~ * .sidebar-container,
+[class*="hero"] ~ * .sidebar-container,
+body:has([class*="hero"]) .sidebar-container {
   display: none !important;
 }
 
-.max-xl\:hx-hidden {
+.hx-container:has([class*="hero"]) ~ * .max-xl\:hx-hidden,
+[class*="hero"] ~ * .max-xl\:hx-hidden,
+body:has([class*="hero"]) .max-xl\:hx-hidden {
   display: none !important;
 }
 
 @media (min-width: 1024px) {
-  .hx-flex > article,
-  .hx-flex > main,
-  .hx-flex > .hx-w-full {
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > article,
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > main,
+  .hx-container:has([class*="hero"]) ~ * .hx-flex > .hx-w-full,
+  [class*="hero"] ~ * .hx-flex > article,
+  [class*="hero"] ~ * .hx-flex > main,
+  [class*="hero"] ~ * .hx-flex > .hx-w-full,
+  body:has([class*="hero"]) .hx-flex > article,
+  body:has([class*="hero"]) .hx-flex > main,
+  body:has([class*="hero"]) .hx-flex > .hx-w-full {
     max-width: 100% !important;
     flex: 1 1 100% !important;
   }
-} 
+}

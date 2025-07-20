@@ -10,12 +10,12 @@ description: "Lightning fast and declarative API testing"
 ## Why Developers Choose Spectest
 
 {{< cards >}}
-{{< card title="Ridiculously Fast" icon="lightning-bolt" subtitle="Execute hundreds of API tests in seconds. Parallel execution and smart caching mean your test suite scales with your API, not against it." >}}
-{{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in plain JSON/YAML that read like documentation. No boilerplate, no setup ceremony—just describe what you expect and let Spectest handle the rest." >}}
-{{< card title="Focused Workflow" icon="cursor-click" subtitle="Built specifically for API testing. Smart defaults, intuitive syntax, and powerful filtering let you focus on what matters: ensuring your APIs work perfectly." >}}
-{{< card title="CI/CD Native" icon="code" subtitle="Designed for modern development workflows. Snapshot testing, environment variables, and detailed reporting make integration seamless." >}}
-{{< card title="Framework Agnostic" icon="puzzle" subtitle="Works with Jest, Vitest, or standalone. Integrate with your existing test suite or use as your primary API testing solution." >}}
-{{< card title="Visual Clarity" icon="eye" subtitle="Clear, actionable output helps you understand failures instantly. Diff views, request/response logging, and smart error messages save debugging time." >}}
+{{< card title="Ridiculously Fast" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution and smart caching." >}}
+{{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in plain JSON/YAML. No boilerplate, just describe what you expect." >}}
+{{< card title="Focused Workflow" icon="cursor-click" subtitle="Built for API testing. Smart defaults and intuitive syntax keep you focused." >}}
+{{< card title="CI/CD Native" icon="code" subtitle="Snapshot testing, environment variables, and detailed reporting for seamless integration." >}}
+{{< card title="Framework Agnostic" icon="puzzle" subtitle="Works with Jest, Vitest, or standalone. Fits into any existing test suite." >}}
+{{< card title="Visual Clarity" icon="eye" subtitle="Clear output with diff views and smart error messages saves debugging time." >}}
 {{< /cards >}}
 
 ## See It In Action
