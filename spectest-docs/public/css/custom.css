@@ -25,3 +25,9 @@ body:has([class*="hero"]) .max-xl\:hx-hidden {
     flex: 1 1 100% !important;
   }
 }
+
+/* Add spacing between title and hero section */
+.hero {
+  margin-top: 2rem !important;
+  padding-top: 2rem !important;
+}
