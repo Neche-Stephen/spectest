@@ -1,6 +1,6 @@
 ---
-title: "Spectest"
 description: "Lightning fast and declarative API testing"
+toc: false
 ---
 
 {{< hero title="API testing without the pain" tagline="Write tests as fast as you think. Spectest transforms API testing from a chore into a superpower with declarative syntax and lightning-fast execution." image="https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png" cta_text="Get Started" cta_url="/docs/introduction/getting-started/" />}}

@@ -1,3 +1,4 @@
+/* YOUR EXISTING CSS - DO NOT MODIFY */
 /* Target pages that contain the hero shortcode (landing page specific) */
 .hx-container:has([class*="hero"]) ~ * .sidebar-container,
 [class*="hero"] ~ * .sidebar-container,
@@ -30,4 +31,45 @@ body:has([class*="hero"]) .max-xl\:hx-hidden {
 .hero {
   margin-top: 2rem !important;
   padding-top: 2rem !important;
+}
+
+/* ========================================= */
+/* NEW CSS FOR TOC REMOVAL & CENTERING - APPROACH 3 */
+/* ========================================= */
+
+/* Use CSS variables to override theme layout */
+body.home,
+body:has([class*="hero"]),
+.hx-container:has([class*="hero"]) {
+  --hextra-sidebar-width: 0px !important;
+  --hextra-toc-width: 0px !important;
+  --hextra-content-max-width: 1200px !important;
+}
+
+/* Hide all sidebar and TOC elements */
+body.home aside,
+body.home .sidebar-container,
+body.home [class*="toc"],
+body:has([class*="hero"]) aside,
+body:has([class*="hero"]) .sidebar-container,
+body:has([class*="hero"]) [class*="toc"] {
+  display: none !important;
+}
+
+/* Center the main content */
+@media (min-width: 1024px) {
+  body.home main,
+  body.home article,
+  body:has([class*="hero"]) main,
+  body:has([class*="hero"]) article {
+    max-width: var(--hextra-content-max-width, 1200px) !important;
+    margin: 0 auto !important;
+    padding: 0 2rem !important;
+  }
+  
+  /* Ensure container takes full width */
+  body.home .hx-container,
+  body:has([class*="hero"]) .hx-container {
+    max-width: 100% !important;
+  }
 }
