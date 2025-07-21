@@ -200,7 +200,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.&lt;/p&gt;
-&lt;p&gt;Related: &lt;a href=&#34;./test-case/&#34; &gt;Test Case&lt;/a&gt; for the available case options.&lt;/p&gt;
+&lt;p&gt;Related: &lt;a href=&#34;//localhost:1313/docs/api-references/test-case/&#34; &gt;Test Case&lt;/a&gt; for the available case options.&lt;/p&gt;
 
       </description>
     </item>
@@ -363,7 +363,7 @@
 &lt;/div&gt;
 &lt;/div&gt;
 &lt;p&gt;If the server returns &lt;code&gt;201&lt;/code&gt; with a matching body the case passes. Any mismatched status or body value results in a failure.&lt;/p&gt;
-&lt;p&gt;See &lt;a href=&#34;../introduction/helpers/&#34; &gt;Helpers&lt;/a&gt; for utilities that modify multiple cases at once.&lt;/p&gt;
+&lt;p&gt;See &lt;a href=&#34;//localhost:1313/docs/introduction/helpers/&#34; &gt;Helpers&lt;/a&gt; for utilities that modify multiple cases at once.&lt;/p&gt;
 
       </description>
     </item>

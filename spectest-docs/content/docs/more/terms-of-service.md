@@ -10,5 +10,3 @@ agree that the maintainers are not liable for any damages or data loss.
 Spectest is distributed under the [MIT License](https://github.com/justiceo/spectest/blob/main/LICENSE).
 If you contribute to the project you agree that your contributions will also be
 licensed under MIT.
-
-[Edit this page](https://github.com/justiceo/spectest/edit/main/spectest-docs/content/docs/more/terms-of-service.md)

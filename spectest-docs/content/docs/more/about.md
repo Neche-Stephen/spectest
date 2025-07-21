@@ -13,5 +13,3 @@ released under the [MIT License](https://github.com/justiceo/spectest/blob/main/
 
 For installation and quick start guides see the [Introduction](/docs/introduction/)
 section or jump straight to the [CLI reference](/docs/api-references/cli/).
-
-[Edit this page](https://github.com/justiceo/spectest/edit/main/spectest-docs/content/docs/more/about.md)

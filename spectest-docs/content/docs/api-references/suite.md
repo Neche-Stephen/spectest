@@ -26,4 +26,4 @@ export default {
 
 Suites may use CommonJS, ES modules or JSON. Each file becomes its own suite and the file name (without extension) is used when no name is provided.
 
-Related: [Test Case](./test-case/) for the available case options.
+Related: [Test Case](/docs/api-references/test-case/) for the available case options.

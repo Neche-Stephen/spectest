@@ -52,4 +52,4 @@ A **test case** describes a single HTTP operation. Only `name` and `endpoint` ar
 
 If the server returns `201` with a matching body the case passes. Any mismatched status or body value results in a failure.
 
-See [Helpers](../introduction/helpers/) for utilities that modify multiple cases at once.
+See [Helpers](/docs/introduction/helpers/) for utilities that modify multiple cases at once.

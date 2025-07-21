@@ -44,11 +44,11 @@
   </url><url>
     <loc>//localhost:1313/docs/more/</loc>
   </url><url>
+    <loc>//localhost:1313/</loc>
+  </url><url>
     <loc>//localhost:1313/categories/</loc>
   </url><url>
     <loc>//localhost:1313/docs/</loc>
-  </url><url>
-    <loc>//localhost:1313/</loc>
   </url><url>
     <loc>//localhost:1313/tags/</loc>
   </url>
