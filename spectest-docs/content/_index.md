@@ -8,12 +8,9 @@ toc: false
 ## Why Developers Choose Spectest
 
 {{< cards >}}
-{{< card title="Ridiculously Fast" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution." >}}
+{{< card title="Fast Execution" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution." >}}
 {{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in JavaScript or JSON. No boilerplate, just describe what you expect." >}}
 {{< card title="Focused Workflow" icon="cursor-click" subtitle="Built for API testing. Smart defaults and intuitive syntax keep you focused." >}}
-{{< card title="CI/CD Native" icon="code" subtitle="Snapshot testing, environment variables, and detailed reporting for seamless integration." >}}
-{{< card title="Framework Agnostic" icon="puzzle" subtitle="Works with Jest, Vitest, or standalone. Fits into any existing test suite." >}}
-{{< card title="Visual Clarity" icon="eye" subtitle="Clear output with helpful error messages to save debugging time." >}}
 {{< /cards >}}
 
 ## See It In Action
@@ -102,10 +99,10 @@ export default [
 npx spectest
 ```
 
-## Powerful Features for Every Use Case
+<!-- ## Powerful Features for Every Use Case -->
 
-### Smart Test Dependencies
-```js
+<!-- ### Smart Test Dependencies -->
+<!-- ```js
 export default [
   {
     name: "Login",
@@ -120,27 +117,27 @@ export default [
     headers: { Authorization: "Bearer {{auth.response.token}}" },
   },
 ];
-```
+``` -->
 
-### Environment Variables & Configuration
+<!-- ### Environment Variables & Configuration
 ```javascript
 // spectest.config.js
 export default {
   baseUrl: process.env.API_URL || 'http://localhost:3000',
   timeout: 5000,
 };
-```
+``` -->
 
-### Snapshot Testing for Regression Prevention
+<!-- ### Snapshot Testing for Regression Prevention
 ```bash
 # Capture current API responses
 npx spectest --snapshot=snapshot.json
 
 # Later, detect any changes
 npx spectest --snapshot=snapshot.json
-```
+``` -->
 
-## Integration That Just Works
+<!-- ## Integration That Just Works
 
 ### With Jest
 ```javascript
@@ -161,7 +158,7 @@ test('API contract', () => {
   const { exitCode } = execaSync('npx', ["spectest"], { stdio: 'inherit' });
   expect(exitCode).toBe(0);
 });
-```
+``` -->
 
 ## Ready to Transform Your API Testing?
 
