@@ -3,17 +3,17 @@ description: "Lightning fast and declarative API testing"
 toc: false
 ---
 
-{{< hero title="API testing without the pain" tagline="Write tests as fast as you think. Spectest transforms API testing from a chore into a superpower with declarative syntax and lightning-fast execution." image="https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png" cta_text="Get Started" cta_url="/docs/introduction/getting-started/" />}}
+{{< hero title="API testing without the pain" tagline="Run declarative HTTP tests quickly from the CLI." image="https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png" cta_text="Get Started" cta_url="/docs/introduction/getting-started/" />}}
 
 ## Why Developers Choose Spectest
 
 {{< cards >}}
-{{< card title="Ridiculously Fast" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution and smart caching." >}}
-{{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in plain JSON/YAML. No boilerplate, just describe what you expect." >}}
+{{< card title="Ridiculously Fast" icon="lightning-bolt" subtitle="Execute hundreds of tests in seconds with parallel execution." >}}
+{{< card title="Truly Declarative" icon="document-text" subtitle="Write tests in JavaScript or JSON. No boilerplate, just describe what you expect." >}}
 {{< card title="Focused Workflow" icon="cursor-click" subtitle="Built for API testing. Smart defaults and intuitive syntax keep you focused." >}}
 {{< card title="CI/CD Native" icon="code" subtitle="Snapshot testing, environment variables, and detailed reporting for seamless integration." >}}
 {{< card title="Framework Agnostic" icon="puzzle" subtitle="Works with Jest, Vitest, or standalone. Fits into any existing test suite." >}}
-{{< card title="Visual Clarity" icon="eye" subtitle="Clear output with diff views and smart error messages saves debugging time." >}}
+{{< card title="Visual Clarity" icon="eye" subtitle="Clear output with helpful error messages to save debugging time." >}}
 {{< /cards >}}
 
 ## See It In Action
@@ -40,19 +40,25 @@ describe('User API', () => {
 ```
 
 ### After: Spectest Declarative Testing
-```yaml
-name: "Create User"
-endpoint: "/api/users"
-method: POST
-body:
-  name: "John"
-  email: "john@example.com"
-expect:
-  status: 201
-  body:
-    id: "@type:number"
-    name: "John"
-    email: "john@example.com"
+```js
+export default [
+  {
+    name: "Create User",
+    endpoint: "/api/users",
+    request: {
+      method: "POST",
+      body: { name: "John", email: "john@example.com" },
+    },
+    response: {
+      status: 201,
+      json: {
+        id: "@type:number",
+        name: "John",
+        email: "john@example.com",
+      },
+    },
+  },
+];
 ```
 
 {{< hint type="tip" >}}
@@ -62,95 +68,98 @@ expect:
 ## Quick Start Guide
 
 {{< cards >}}
-{{< card title="1. Install" icon="download" subtitle="Get up and running in seconds with our CLI tool" >}}
-{{< card title="2. Create Test Suite" icon="document-add" subtitle="Write your first test in simple YAML format" >}}
-{{< card title="3. Run Tests" icon="play" subtitle="Watch your tests execute with beautiful, detailed output" >}}
+{{< card title="1. Install" icon="download" subtitle="Get up and running with the CLI" >}}
+{{< card title="2. Create Config" icon="cog" subtitle="Define baseUrl in spectest.config.js" >}}
+{{< card title="3. Write Tests" icon="document-add" subtitle="Author cases in JavaScript or JSON" >}}
+{{< card title="4. Run Tests" icon="play" subtitle="Execute suites with clear results" >}}
 {{< /cards >}}
 
 ### Install Spectest
 ```bash
 npm install -g spectest
 ```
+### Create a Config File
+```js
+// spectest.config.js
+export default {
+  baseUrl: "https://api.example.com",
+  testDir: "./test",
+  filePattern: "\.spectest\.",
+};
+```
+
 
 ### Create Your First Test
-```yaml
-# api-tests.yaml
-baseURL: "https://api.example.com"
-tests:
-  - name: "Health Check"
-    endpoint: "/health"
-    expect:
-      status: 200
+```js
+// health.spectest.js
+export default [
+  { name: "Health Check", endpoint: "/health", response: { status: 200 } },
+];
 ```
 
 ### Run Your Tests
 ```bash
-spectest run api-tests.yaml
+npx spectest
 ```
 
 ## Powerful Features for Every Use Case
 
 ### Smart Test Dependencies
-```yaml
-tests:
-  - name: "Login"
-    operationId: "auth"
-    endpoint: "/auth/login"
-    body:
-      username: "admin"
-      password: "secret"
-    
-  - name: "Get Profile"
-    dependsOn: ["auth"]
-    endpoint: "/user/profile"
-    headers:
-      Authorization: "Bearer {{auth.response.token}}"
+```js
+export default [
+  {
+    name: "Login",
+    operationId: "auth",
+    endpoint: "/auth/login",
+    request: { body: { username: "admin", password: "secret" } },
+  },
+  {
+    name: "Get Profile",
+    dependsOn: ["auth"],
+    endpoint: "/user/profile",
+    headers: { Authorization: "Bearer {{auth.response.token}}" },
+  },
+];
 ```
 
 ### Environment Variables & Configuration
 ```javascript
 // spectest.config.js
-module.exports = {
-  baseURL: process.env.API_URL || 'http://localhost:3000',
+export default {
+  baseUrl: process.env.API_URL || 'http://localhost:3000',
   timeout: 5000,
-  retries: 2,
-  parallel: true
 };
 ```
 
 ### Snapshot Testing for Regression Prevention
 ```bash
 # Capture current API responses
-spectest run --snapshot
+npx spectest --snapshot=snapshot.json
 
 # Later, detect any changes
-spectest run --check-snapshots
+npx spectest --snapshot=snapshot.json
 ```
 
 ## Integration That Just Works
 
 ### With Jest
 ```javascript
-import { runSpectest } from 'spectest';
+import { spawnSync } from 'child_process';
 
-describe('API Integration', () => {
-  it('should pass all API tests', async () => {
-    const results = await runSpectest('api-tests.yaml');
-    expect(results.failed).toBe(0);
-  });
+test('API contract', () => {
+  const result = spawnSync('npx', ['spectest'], { stdio: 'inherit' });
+  expect(result.status).toBe(0);
 });
 ```
 
 ### With Vitest
 ```javascript
-import { describe, it, expect } from 'vitest';
-import { runSpectest } from 'spectest';
+import { execaSync } from 'execa';
+import { expect, test } from 'vitest';
 
-describe('API Tests', () => {
-  it('validates all endpoints', async () => {
-    const results = await runSpectest('./tests/*.spec.yaml');
-    expect(results.passed).toBeGreaterThan(0);
-  });
+test('API contract', () => {
+  const { exitCode } = execaSync('npx', ["spectest"], { stdio: 'inherit' });
+  expect(exitCode).toBe(0);
 });
 ```
 
@@ -159,7 +168,7 @@ describe('API Tests', () => {
 {{< cards >}}
 {{< card title="Read the Docs" icon="book-open" link="/docs/introduction/" subtitle="Comprehensive guides, examples, and API references to get you up to speed quickly" >}}
 {{< card title="View on GitHub" icon="github" link="https://github.com/justiceo/spectest" subtitle="Explore the source code, contribute, or report issues. We ❤️ community feedback!" >}}
-{{< card title="Get Support" icon="chat" link="/docs/more/about/" subtitle="Join our community or reach out for help. We're here to make your testing experience amazing" >}}
+{{< card title="Get Support" icon="chat" link="/docs/more/about/" subtitle="Join our community or reach out for help" >}}
 {{< /cards >}}
 
 ---
