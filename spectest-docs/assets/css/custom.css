@@ -1,6 +1,7 @@
 /* YOUR EXISTING CSS - DO NOT MODIFY */
 /* Target pages that contain the hero shortcode (landing page specific) */
-.hx-container:has([class*="hero"]) ~ * .sidebar-container,
+@media (min-width:1024px){
+  .hx-container:has([class*="hero"]) ~ * .sidebar-container,
 [class*="hero"] ~ * .sidebar-container,
 body:has([class*="hero"]) .sidebar-container {
   display: none !important;
@@ -10,6 +11,7 @@ body:has([class*="hero"]) .sidebar-container {
 [class*="hero"] ~ * .max-xl\:hx-hidden,
 body:has([class*="hero"]) .max-xl\:hx-hidden {
   display: none !important;
+}
 }
 
 @media (min-width: 1024px) {
@@ -27,7 +29,8 @@ body:has([class*="hero"]) .max-xl\:hx-hidden {
   }
 }
 
-/* Add spacing between title and hero section */
+@media (min-width: 1024px) {
+  /* Add spacing between title and hero section */
 .hero {
   margin-top: 2rem !important;
   padding-top: 2rem !important;
@@ -54,6 +57,7 @@ body:has([class*="hero"]) aside,
 body:has([class*="hero"]) .sidebar-container,
 body:has([class*="hero"]) [class*="toc"] {
   display: none !important;
+}
 }
 
 /* Center the main content */

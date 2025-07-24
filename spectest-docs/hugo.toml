@@ -8,12 +8,21 @@ title = 'Spectest Documentation'
 theme = 'github.com/imfing/hextra'
 
 [params]
-  logo = 'https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png'
   description = 'Documentation for Spectest'
-   # Remove the old darkMode = true line and replace with:
+  [params.navbar]
+    displayTitle = false  # Set to true if you want both logo and title
+    displayLogo = true
+    
+    [params.navbar.logo]
+      path = "https://raw.githubusercontent.com/justiceo/spectest/refs/heads/main/assets/spectest-logo-transparent.png"
+      width = 150
+      height = 150
+      link = "/"
+
+  # Theme configuration
   [params.theme]
-    default = "light"        # This forces light mode as default
-    displayToggle = true     # This allows users to toggle if they want
+    default = "light"        
+    displayToggle = true    
 
 
   [params.search]

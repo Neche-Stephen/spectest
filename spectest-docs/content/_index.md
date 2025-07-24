@@ -99,67 +99,6 @@ export default [
 npx spectest
 ```
 
-<!-- ## Powerful Features for Every Use Case -->
-
-<!-- ### Smart Test Dependencies -->
-<!-- ```js
-export default [
-  {
-    name: "Login",
-    operationId: "auth",
-    endpoint: "/auth/login",
-    request: { body: { username: "admin", password: "secret" } },
-  },
-  {
-    name: "Get Profile",
-    dependsOn: ["auth"],
-    endpoint: "/user/profile",
-    headers: { Authorization: "Bearer {{auth.response.token}}" },
-  },
-];
-``` -->
-
-<!-- ### Environment Variables & Configuration
-```javascript
-// spectest.config.js
-export default {
-  baseUrl: process.env.API_URL || 'http://localhost:3000',
-  timeout: 5000,
-};
-``` -->
-
-<!-- ### Snapshot Testing for Regression Prevention
-```bash
-# Capture current API responses
-npx spectest --snapshot=snapshot.json
-
-# Later, detect any changes
-npx spectest --snapshot=snapshot.json
-``` -->
-
-<!-- ## Integration That Just Works
-
-### With Jest
-```javascript
-import { spawnSync } from 'child_process';
-
-test('API contract', () => {
-  const result = spawnSync('npx', ['spectest'], { stdio: 'inherit' });
-  expect(result.status).toBe(0);
-});
-```
-
-### With Vitest
-```javascript
-import { execaSync } from 'execa';
-import { expect, test } from 'vitest';
-
-test('API contract', () => {
-  const { exitCode } = execaSync('npx', ["spectest"], { stdio: 'inherit' });
-  expect(exitCode).toBe(0);
-});
-``` -->
-
 ## Ready to Transform Your API Testing?
 
 {{< cards >}}
