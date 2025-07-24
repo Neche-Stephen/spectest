@@ -10,7 +10,7 @@ theme = 'github.com/imfing/hextra'
 [params]
   description = 'Documentation for Spectest'
   [params.navbar]
-    displayTitle = false  # Set to true if you want both logo and title
+    displayTitle = false
     displayLogo = true
     
     [params.navbar.logo]
